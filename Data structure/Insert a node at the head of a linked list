@@ -1,0 +1,13 @@
+//just inserting node wiht head pointer;
+
+SinglyLinkedListNode* insertNodeAtHead(SinglyLinkedListNode* llist, int data) {
+    
+        SinglyLinkedListNode *node=new SinglyLinkedListNode(data);
+        if(node==nullptr)return node;
+        node->next=llist;
+        llist=node;
+        return llist;    
+
+
+}
+
