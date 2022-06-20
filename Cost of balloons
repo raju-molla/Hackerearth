@@ -1,0 +1,30 @@
+#include <bits/stdc++.h>
+using namespace std;
+int main() {
+	int t;
+	cin>>t;
+	while(t--){
+		int g,p,n;
+		cin>>g>>p>>n;
+		int a=0;
+		int b=0;
+		for(int i=0; i<n; i++){
+			int a1,b1;
+			cin>>a1>>b1;
+			if(a1==1){
+				a++;
+			}
+			if(b1==1){
+				b++;
+			}
+		}
+		//cout<<a<<b<<endl;
+		int r1= a*g;
+		int r2=b*p;
+		int r3=a*p;
+		int r4=b*g;
+		int sum1 = r1+r2;
+		int sum2 = r3+r4;
+        cout<<min(sum1,sum2)<<endl;
+	}
+}
