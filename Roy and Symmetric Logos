@@ -1,0 +1,59 @@
+
+#include <bits/stdc++.h>
+using namespace std;
+
+
+bool solve(string s, int n)
+{
+    for(int i=0; i<n/2;i++){
+        if(s[i]!=s[n-i-1]){
+            return false;
+        }
+    }
+    return true;
+}
+
+
+int main() {
+	int t;
+	cin>>t;
+	while(t--){
+		int n;
+		cin>>n;
+		string s[n];
+		for(int i=0; i<n; i++){
+            cin>>s[i];
+		}
+		int c=0;
+		for(int i=0; i<n; i++){
+            bool flag = solve(s[i],n);
+            if(flag==false){
+                c=1;
+                break;
+            }
+		}
+		for(int i=0; i<n; i++){
+            bool flag = true;
+            for(int j=0; j<n/2; j++){
+                if(s[j][i]!=s[n-j-1][i]){
+                    flag=false;
+                    break;
+                }
+            }
+            if(!flag){
+                c=1;
+                break;
+            }
+		}
+
+
+		if(c==0){
+            cout<< "YES\n";
+		}
+		else{
+            cout<< "NO\n";
+		}
+
+
+	}
+}
