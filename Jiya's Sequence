@@ -1,0 +1,26 @@
+#include <bits/stdc++.h>
+using namespace std;
+ 
+ 
+int main() {
+	int t;
+	cin>>t;
+	while(t--){
+        int n;
+        cin>>n;
+        long long res = 1;
+        for(int i=0; i<n; i++){
+            int a;
+            cin>>a;
+            res = res*a;
+        }
+        int ans = res%10;
+        if(ans==2 || ans==3 || ans==5){
+            cout<< "YES\n";
+        }
+        else{
+            cout<< "NO\n";
+        }
+	}
+ 
+}
